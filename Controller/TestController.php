@@ -1,24 +1,6 @@
 <?php
 ini_set('display_errors', 1);
 
-function array2str($array, $pre = '', $pad = '', $sep = '')
-{
-    $str = '';
-    if(is_array($array)) {
-        if(count($array)) {
-            foreach($array as $v) {
-                $str .= $pre.$v.$pad.$sep;
-            }
-            $str = substr($str, 0, -strlen($sep));
-        }
-    } else {
-        $str .= $pre.$array.$pad;
-    }
-
-    return $str;
-}
-
-
 class TestController
 {
     /**
